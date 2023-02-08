@@ -1,0 +1,99 @@
+<html>
+  <head>
+    <style>
+      h1 {
+        font-size: 33px;
+        font-weight: bold;
+        text-align: center;
+        color: red;
+      }
+
+      form {
+        display: block;
+        margin: 0 auto;
+        width: 40%;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        text-align: center;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      select {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin-top: 20px;
+        border: 0;
+        border-radius: 5px;
+        background-color: #4CAF50;
+        color: white;
+        cursor: pointer;
+      }
+
+      .successMessage {
+        display: none;
+        text-align: center;
+        color: green;
+        margin-top: 230px;
+    
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="title">BINARY ICT CARE</h1>
+    
+    <form>
+      <input type="text" placeholder="Name"required>
+      <input type="text" placeholder="Father's Name">
+      <input type="text" placeholder="Mother's Name">
+      <input type="email" placeholder="Email">
+      <input type="tel" placeholder="Phone Number">
+      <textarea placeholder="Address"></textarea>
+      <select>
+        <option value="" disabled selected>Which batch you want to join ?</option>
+        <option value="batch1">Batch 1(Sat-Mon-Wed)</option>
+        <option value="batch2">Batch 2(Sun-Tue-Thu)</option>
+        <option value="batch3">Batch 3(Sat-Mon-Wed)</option>
+        <option value="batch4">Batch 4(Sun-Tue-Thu)</option>
+        
+      
+      
+  
+       
+        
+      </select>
+      <input type="submit" value="Submit">
+    </form>
+   <h3 style="border:red; border-width:3px; border-style:double;" <p class="successMessage">Thanks For Submitting Your Form.We will contact you as soon as possible</p></h3>
+
+    <script>
+      const form = document.querySelector("form");
+      const successMessage = document.querySelector(".successMessage");
+      form.addEventListener("submit", event => {
+        event.preventDefault();
+        document.getElementById("title").style.display = "none";
+        form.style.display = "none";
+        successMessage.style.display = "block";
+      });
+    </script>
+    <footer style="text-align:center;">
+      Copyright &copy; 2023 BINARY ICT
+b
